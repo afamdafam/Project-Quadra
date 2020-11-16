@@ -94,12 +94,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2afa7e65853072649924acb3bab14a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dots:
-  - {fileID: 2218323270937148550, guid: dc9f56acdf969d148ad0f40fe6052a1c, type: 3}
-  - {fileID: 1965285410149224145, guid: b2f22c6e2afbe4c418a99fd46d742651, type: 3}
-  - {fileID: 2897449582817778943, guid: 39cb38409356c994fbeeebdec71dc550, type: 3}
-  - {fileID: 3403563341301616826, guid: 0c90f214d91a7974da66c8ac57e3b427, type: 3}
-  - {fileID: 7369101177018945162, guid: b09f37a31f7005146bfc020d2c59d449, type: 3}
-  - {fileID: 6318016789608751989, guid: 09c3c6a84d143f74988234d92ac6755b, type: 3}
-  - {fileID: 3363588857476107657, guid: d9375b56431b8234eac7a5a058555755, type: 3}
-  - {fileID: 8024924637244063980, guid: 3f98bcc3aa8e39441a906df428083bfb, type: 3}
