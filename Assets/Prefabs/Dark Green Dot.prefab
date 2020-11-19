@@ -125,6 +125,9 @@ MonoBehaviour:
   isColorBomb: 0
   isColumnBomb: 0
   isRowBomb: 0
+  isAdjacentBomb: 0
+  adjacentMarker: {fileID: 3630480871822181144, guid: 85a8f62417086e44aaec367cbaba2da7,
+    type: 3}
   rowArrow: {fileID: 3796041361539890676, guid: 7b3da02860c37f948af78033f91e9b0f,
     type: 3}
   columnArrow: {fileID: 1760603683805717155, guid: 19cbe0c60057f07448f143f909f5db2d,
