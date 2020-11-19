@@ -113,6 +113,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   column: 0
   row: 0
+  previousColumn: 0
+  previousRow: 0
   targetX: 0
   targetY: 0
+  isMatched: 0
+  findMatches: {fileID: 0}
   swipeAngle: 0
+  swipeResist: 1
+  isColumnBomb: 0
+  isRowBomb: 0
+  rowArrow: {fileID: 3796041361539890676, guid: 7b3da02860c37f948af78033f91e9b0f,
+    type: 3}
+  columnArrow: {fileID: 1760603683805717155, guid: 19cbe0c60057f07448f143f909f5db2d,
+    type: 3}

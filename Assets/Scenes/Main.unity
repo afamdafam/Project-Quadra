@@ -248,6 +248,9 @@ MonoBehaviour:
   - {fileID: 2897449582817778943, guid: 39cb38409356c994fbeeebdec71dc550, type: 3}
   - {fileID: 1965285410149224145, guid: b2f22c6e2afbe4c418a99fd46d742651, type: 3}
   - {fileID: 2218323270937148550, guid: dc9f56acdf969d148ad0f40fe6052a1c, type: 3}
+  destroyEffect: {fileID: 2093524408810102588, guid: f2d8a18a4d32178408ae075be441360f,
+    type: 3}
+  currentDot: {fileID: 0}
 --- !u!4 &1781739466
 Transform:
   m_ObjectHideFlags: 0
