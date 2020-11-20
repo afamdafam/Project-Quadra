@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 511857314}
   - component: {fileID: 511857313}
   - component: {fileID: 511857312}
+  - component: {fileID: 511857315}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -204,6 +205,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &511857315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511857311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7674c1d7c3ace04b88fa9b585e2aeaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraOffset: -10
+  aspectRatio: 0.625
+  padding: 2
 --- !u!1 &1781739464
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1781739466}
   - component: {fileID: 1781739465}
+  - component: {fileID: 1781739467}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -234,10 +251,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 1
-  width: 7
+  width: 10
   height: 10
   offSet: 0
   tilePrefab: {fileID: 4490477957495840364, guid: 13ec7195d767ae644b73631a1bd1f49b,
+    type: 3}
+  breakableTilePrefab: {fileID: 8819245353023235940, guid: 6450c7842dbe5884d8e3274c1cc79494,
     type: 3}
   dots:
   - {fileID: 8024924637244063980, guid: 3f98bcc3aa8e39441a906df428083bfb, type: 3}
@@ -250,6 +269,7 @@ MonoBehaviour:
   - {fileID: 2218323270937148550, guid: dc9f56acdf969d148ad0f40fe6052a1c, type: 3}
   destroyEffect: {fileID: 2093524408810102588, guid: f2d8a18a4d32178408ae075be441360f,
     type: 3}
+  boardLayout: []
   currentDot: {fileID: 0}
 --- !u!4 &1781739466
 Transform:
@@ -265,6 +285,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1781739467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781739464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f562b995c8fdd8a49ad1aadfac537caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hintDelay: 3
+  hintParticle: {fileID: 2067614028430566722, guid: 5528c1290ef8fdf468107ea646b6d2a3,
+    type: 3}
+  currentHint: {fileID: 0}
 --- !u!1 &1804639031
 GameObject:
   m_ObjectHideFlags: 0
