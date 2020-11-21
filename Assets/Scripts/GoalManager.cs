@@ -28,15 +28,15 @@ public class GoalManager : MonoBehaviour
         for(int i = 0; i < levelGoals.Length; i++)
         {
             //Create a new goal panel at the goalIntroParent Position
-            GameObject goal = Instantiate(goalPrefab, goalIntroParent.transfom.position, Quaternion.identity);
-            goal.transfom.SetParent(goalIntroParent.transfom);
+            GameObject goal = Instantiate(goalPrefab, goalIntroParent.transform.position, Quaternion.identity);
+            goal.transform.SetParent(goalIntroParent.transform);
             //Set the image and text of the goal
             GoalPanel panel = goal.GetComponent < GoalPanel();
             panel.thisSprite = levelGoals[i].goalSprite;
             panel.thisString = "0/" + levelGoals[i].numberNeeded;
             //Create a new goal panel at the goalGameParent Position
-            GameObject gameGoal = Instantiate(goalPrefab, goalGameParent.transfom.position, Quaternion.identity);
-            gameGoal.transfom.SetParent(goalGameParent.transfom);
+            GameObject gameGoal = Instantiate(goalPrefab, goalGameParent.transform.position, Quaternion.identity);
+            gameGoal.transform.SetParent(goalGameParent.transform);
         }
     }
 
