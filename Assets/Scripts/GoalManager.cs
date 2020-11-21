@@ -14,19 +14,16 @@ public class BlankGoal
 public class GoalManager : MonoBehaviour
 {
     public BlankGoal[] levelGoals;
-    public List<GoalPanel> currentGoals = new List<GoalPanel>();
     public GameObject goalPrefab;
     public GameObject goalIntroParent;
     public GameObject goalGameParent;
-    private EndGameManager endGame;
     // Start is called before the first frame update
     void Start()
     {
-        endGame = FindObjectOfType<EndGameManager>();
-        SetupGoals();
+        SetupIntroGoals();
     }
 
-    void SetupGoals()
+    void SetupIntroGoals()
     {
         for(int i = 0; i < levelGoals.Length; i++)
         {
@@ -34,49 +31,18 @@ public class GoalManager : MonoBehaviour
             GameObject goal = Instantiate(goalPrefab, goalIntroParent.transform.position, Quaternion.identity);
             goal.transform.SetParent(goalIntroParent.transform);
             //Set the image and text of the goal
-            GoalPanel panel = goal.GetComponent<GoalPanel>();
+            GoalPanel panel = goal.GetComponent < GoalPanel();
             panel.thisSprite = levelGoals[i].goalSprite;
             panel.thisString = "0/" + levelGoals[i].numberNeeded;
             //Create a new goal panel at the goalGameParent Position
             GameObject gameGoal = Instantiate(goalPrefab, goalGameParent.transform.position, Quaternion.identity);
             gameGoal.transform.SetParent(goalGameParent.transform);
-            currentGoals.Add(panel);
-            panel.thisSprite = levelGoals[i].goalSprite;
-            panel.thisString = "0/" + levelGoals[i].numberNeeded;
         }
     }
 
     // Update is called once per frame
-    public void UpdateGoals()
+    void Update()
     {
-        int goalsCompleted = 0;
-        for (int i = 0; i < levelGoals.Length; i++)
-        {
-            currentGoals[i].thisText.text = "" + levelGoals[i].numberCollected + "/" + levelGoals[i].numberNeeded;
-            if (levelGoals[i].numberCollected >= levelGoals[i].numberNeeded)
-            {
-                goalsCompleted++;
-                currentGoals[i].thisText.text = "" + levelGoals[i].numberNeeded + "/" + levelGoals[i].numberNeeded;
-            }
-        }
-        if (goalsCompleted >= levelGoals.Length)
-        {
-            if(endGame != null)
-            {
-                endGame.WinGame();
-            }
-            Debug.Log("You win!");
-        }
-    }
-
-    public void CompareGoal(string goalToCompare)
-    {
-        for (int i = 0; i < levelGoals.Length; i++)
-        {
-            if (goalToCompare == levelGoals[i].matchValue)
-            {
-                levelGoals[i].numberCollected++;
-            }
-        }
+        
     }
 }
