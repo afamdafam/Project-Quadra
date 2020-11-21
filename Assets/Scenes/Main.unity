@@ -1249,7 +1249,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e0825358bb467f044954f23875143cdf, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2255,3 +2255,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelGoals: []
+  goalPrefab: {fileID: 0}
+  goalIntroParent: {fileID: 0}
+  goalGameParent: {fileID: 0}
